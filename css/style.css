@@ -16,6 +16,7 @@ body div{
     height: 100vh;
 }
 #ticketInfoContainer{
+    width: auto;
     height: auto;
 }
 #ticket{
