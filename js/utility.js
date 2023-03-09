@@ -12,7 +12,12 @@ function CalculatePrice(numKm, age){
     return price;
 }
 
-
+/**
+ * Function used to apply a discount on a passed price amount
+ * @param {bigint} price Amount where apply the discount
+ * @param {bigint} age Age of the user (used to decide if apply a discount)
+ * @returns {decimal} Price as decimale
+ */
 function ApplyDiscountOnPrice(price, age){
     if(age<ageJunior)//If age is junior
         price = price - (price*discountJunior)/100;
