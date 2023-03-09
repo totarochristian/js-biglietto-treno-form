@@ -45,3 +45,12 @@ function ShowTicket(name,surname,numKm,age,price){
     ticketInfoContainer.classList.toggle('d-none');
     ticket.classList.toggle('d-none');
 }
+
+function CheckErrors(){
+    return "errore";
+}
+
+function ShowModal(error){
+    modal.querySelector('#errors').innerHTML = error;
+
+}

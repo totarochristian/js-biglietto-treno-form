@@ -51,6 +51,7 @@ const ageSenior = 65;
 const discountSenior = 40;
 
 //Gets object to use in the program
+const modal = document.getElementById('modalErrors');
 const ticketInfoContainer = document.getElementById('ticketInfoContainer');
 const ticket = document.getElementById('ticket');
 const inputNameOfPassenger = ticketInfoContainer.querySelector('input[name="inputName"]');
@@ -69,8 +70,13 @@ function ClickGenerateTicket(){
     //Gets values to calculate the price
     let numberOfKilometres = inputNumberOfKilometres.value;
     let ageOfPassenger = inputAgeOfPassenger.value;
-    //calculate the price
-    let price = CalculatePrice(numberOfKilometres, ageOfPassenger);
-    //Show the ticket and hide the ticket info container
-    ShowTicket(nameOfPassenger,surnameOfPassenger,numberOfKilometres,ageOfPassenger,price);
+    //Check for errors
+    let errors = CheckErrors(nameOfPassenger,surnameOfPassenger,numberOfKilometres,ageOfPassenger);
+    if(!errors){
+        //calculate the price
+        let price = CalculatePrice(numberOfKilometres, ageOfPassenger);
+        //Show the ticket and hide the ticket info container
+        ShowTicket(nameOfPassenger,surnameOfPassenger,numberOfKilometres,ageOfPassenger,price);
+    }else
+        ShowModal(errors);
 }
