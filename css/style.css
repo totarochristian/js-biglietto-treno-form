@@ -1,0 +1,67 @@
+/******************************************************************************/
+/**************************** Variables definition ****************************/
+/******************************************************************************/
+:root{
+    --ticket-height: 600px;
+    --ticket-header-height-perc: 15%;
+    --ticket-content-height-perc: 80%;
+    --ticket-footer-height-perc: 5%;
+}
+
+/*****************************************************************/
+/**************************** General ****************************/
+/*****************************************************************/
+body div{
+    width: 100%;
+    height: 100vh;
+}
+#ticket{
+    max-width: 650px;
+    max-height: var(--ticket-height);
+    background-color: #ececec;
+    box-shadow: 0 0 20px #888;
+}
+#ticket-header{
+    max-height: var(--ticket-header-height-perc);
+    background-color: #12477b;
+}
+#ticket-content{
+    max-height: var(--ticket-content-height-perc);
+    width: 100%;
+    height: 100%;
+}
+#ticket-info, #ticket-info>div, #ticket-code{
+    height: 100%;
+}
+#ticket-code img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#ticket-footer{
+    max-height: var(--ticket-footer-height-perc);
+    background-color: #d43a30;
+}
+.row div{
+    height: auto;
+}
+.ct-flex-cont{
+    display: flex;
+    flex-wrap: wrap;
+}
+input[type="text"]:disabled, input[type="number"]:disabled{
+    background-color: white;
+}
+
+/*****************************************************************/
+/***************************** Media *****************************/
+/**************************** Queries ****************************/
+/*****************************************************************/
+@media screen and (min-width: 768px){
+    :root{
+        --ticket-height: 400px;
+        --ticket-header-height-perc: 20%;
+        --ticket-content-height-perc: 70%;
+        --ticket-footer-height-perc: 10%;
+    }
+}
