@@ -41,6 +41,8 @@ Based on this information, he will have to calculate the total price of the trav
 //Define constants
 /** Price for each kilometer to be traveled */
 const priceForKilometer = 0.21;
+const discountJunior = 20;
+const discountSenior = 40;
 
 //Gets object to use in the program
 const ticketInfoContainer = document.getElementById('ticketInfoContainer');;
@@ -55,9 +57,13 @@ function GenerateTicket(){
     //Gets values to calculate the price
     let numberOfKilometres = inputNumberOfKilometres.value;
     let ageOfPassenger = inputAgeOfPassenger.value;
-
+    //calculate the price
     let price = numberOfKilometres * priceForKilometer;
-    console.log(numberOfKilometres);
-    console.log(ageOfPassenger);
+    console.log(price);
+    //Apply the discount (if necessary)
+    if(ageOfPassenger<18)
+        price = price - (price*discountJunior)/100;
+    else if(ageOfPassenger>65)
+        price = price - (price*discountSenior)/100;
     console.log(price);
 }
