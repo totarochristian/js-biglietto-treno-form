@@ -7,12 +7,16 @@
 function CalculatePrice(numKm, age){
     //Calculate basic price
     let price = numKm * priceForKilometer;
-    //Apply the discount (if necessary)
-    if(age<ageJunior)
-        price = price - (price*discountJunior)/100;
-    else if(age>ageSenior)
-        price = price - (price*discountSenior)/100;
-    //Set 2 decimal places
-    price = price.toFixed(2);
+    //Set 2 decimal places to the price obtained after the apply of discount
+    price = ApplyDiscountOnPrice(price, age).toFixed(2);
     return price;
-  }
+}
+
+
+function ApplyDiscountOnPrice(price, age){
+    if(age<ageJunior)//If age is junior
+        price = price - (price*discountJunior)/100;
+    else if(age>ageSenior)//if age is senior
+        price = price - (price*discountSenior)/100;
+    return price;
+}
