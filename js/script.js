@@ -41,9 +41,13 @@ Based on this information, he will have to calculate the total price of the trav
 //Define constants
 /** Price for each kilometer to be traveled */
 const priceForKilometer = 0.21;
+/** Max age (+1) to apply the junior discount */
 const ageJunior = 18;
+/** Percentage of the junior discount */
 const discountJunior = 20;
+/** Min age (-1) to apply the seniot discount */
 const ageSenior = 65;
+/** Percentage of the senior discount */
 const discountSenior = 40;
 
 //Gets object to use in the program
