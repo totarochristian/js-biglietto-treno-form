@@ -26,13 +26,17 @@ function ApplyDiscountOnPrice(price, age){
     return price;
 }
 
-function ShowTicket(numKm,age,price){
+function ShowTicket(name,surname,numKm,age,price){
     //Gets object of the ticket
+    const inputTicketName = ticket.querySelector('#ticketName');
+    const inputTicketSurname = ticket.querySelector('#ticketSurname');
     const inputTicketAge = ticket.querySelector('#ticketAge');
     const inputTicketNumberOfKilometres = ticket.querySelector('#ticketKilometres');
     const inputTicketPrice = ticket.querySelector('#ticketPrice');
 
     //Change the value fo the objects
+    inputTicketName.value = name;
+    inputTicketSurname.value = surname;
     inputTicketAge.value = age;
     inputTicketNumberOfKilometres.value = numKm;
     inputTicketPrice.value = price;

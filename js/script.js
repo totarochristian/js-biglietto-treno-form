@@ -53,6 +53,8 @@ const discountSenior = 40;
 //Gets object to use in the program
 const ticketInfoContainer = document.getElementById('ticketInfoContainer');
 const ticket = document.getElementById('ticket');
+const inputNameOfPassenger = ticketInfoContainer.querySelector('input[name="inputName"]');
+const inputSurnameOfPassenger = ticketInfoContainer.querySelector('input[name="inputSurname"]');
 const inputAgeOfPassenger = ticketInfoContainer.querySelector('input[name="inputAge"]');
 const inputNumberOfKilometres = ticketInfoContainer.querySelector('input[name="inputKilometres"]');
 const buttonGenerate = ticketInfoContainer.querySelector('#generate');
@@ -61,11 +63,14 @@ const buttonGenerate = ticketInfoContainer.querySelector('#generate');
 buttonGenerate.addEventListener('click', ClickGenerateTicket);
 
 function ClickGenerateTicket(){
+    //Gets name and surname of passenger
+    let nameOfPassenger = inputNameOfPassenger.value;
+    let surnameOfPassenger = inputSurnameOfPassenger.value;
     //Gets values to calculate the price
     let numberOfKilometres = inputNumberOfKilometres.value;
     let ageOfPassenger = inputAgeOfPassenger.value;
     //calculate the price
     let price = CalculatePrice(numberOfKilometres, ageOfPassenger);
     //Show the ticket and hide the ticket info container
-    ShowTicket(numberOfKilometres,ageOfPassenger,price);
+    ShowTicket(nameOfPassenger,surnameOfPassenger,numberOfKilometres,ageOfPassenger,price);
 }
