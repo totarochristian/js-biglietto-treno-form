@@ -25,7 +25,7 @@ body div{
     background-color: #ececec;
     box-shadow: 0 0 20px #888;
 }
-#ticket-header{
+#ticket-header, #ticketInfoHeader{
     max-height: var(--ticket-header-height-perc);
     background-color: #12477b;
 }
@@ -33,6 +33,11 @@ body div{
     max-height: var(--ticket-content-height-perc);
     width: 100%;
     height: 100%;
+}
+#ticketInfoContainer>.row{
+    width: 70%;
+    height: 80%;
+    margin: 0 auto;
 }
 #ticket-info, #ticket-info>div, #ticket-code{
     height: 100%;
@@ -42,7 +47,7 @@ body div{
     height: 100%;
     object-fit: cover;
 }
-#ticket-footer{
+#ticket-footer, #ticketInfoContainer>div>div:last-child{
     max-height: var(--ticket-footer-height-perc);
     background-color: #d43a30;
 }
@@ -55,6 +60,12 @@ body div{
 }
 input[type="text"]:disabled, input[type="number"]:disabled{
     background-color: white;
+}
+.ct-bg-color-ticket{
+    background-color: #ececec;
+}
+.ct-bg-color-red{
+    background-color: #d43a30;
 }
 
 /*****************************************************************/
