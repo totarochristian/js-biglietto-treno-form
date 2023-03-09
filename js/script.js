@@ -46,11 +46,10 @@ const priceForKilometer = 0.21;
 const ticketInfoContainer = document.getElementById('ticketInfoContainer');;
 const inputAgeOfPassenger = ticketInfoContainer.querySelector('input[name="inputAge"]');
 const inputNumberOfKilometres = ticketInfoContainer.querySelector('input[name="inputKilometres"]');
-const buttonGenerate = ticketInfoContainer.querySelector('button#generate');
+const buttonGenerate = ticketInfoContainer.querySelector('#generate');
 
 //Add GenerateTicket function as click event listener function for the generate button
-buttonGenerate.addEventListener('click', GenerateTicket());
-
+buttonGenerate.addEventListener('click', GenerateTicket);
 
 function GenerateTicket(){
     //Gets values to calculate the price
@@ -58,4 +57,7 @@ function GenerateTicket(){
     let ageOfPassenger = inputAgeOfPassenger.value;
 
     let price = numberOfKilometres * priceForKilometer;
+    console.log(numberOfKilometres);
+    console.log(ageOfPassenger);
+    console.log(price);
 }
