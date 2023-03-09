@@ -53,9 +53,9 @@ const inputNumberOfKilometres = ticketInfoContainer.querySelector('input[name="i
 const buttonGenerate = ticketInfoContainer.querySelector('#generate');
 
 //Add GenerateTicket function as click event listener function for the generate button
-buttonGenerate.addEventListener('click', GenerateTicket);
+buttonGenerate.addEventListener('click', ClickGenerateTicket);
 
-function GenerateTicket(){
+function ClickGenerateTicket(){
     //Gets values to calculate the price
     let numberOfKilometres = inputNumberOfKilometres.value;
     let ageOfPassenger = inputAgeOfPassenger.value;
