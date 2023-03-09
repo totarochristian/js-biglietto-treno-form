@@ -18,6 +18,7 @@ body div{
 #ticketInfoContainer{
     width: auto;
     height: auto;
+    max-width: 830px;
 }
 #ticket{
     max-width: 650px;
