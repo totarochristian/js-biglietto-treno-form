@@ -25,3 +25,19 @@ function ApplyDiscountOnPrice(price, age){
         price = price - (price*discountSenior)/100;
     return price;
 }
+
+function ShowTicket(numKm,age,price){
+    //Gets object of the ticket
+    const inputTicketAge = ticket.querySelector('#ticketAge');
+    const inputTicketNumberOfKilometres = ticket.querySelector('#ticketKilometres');
+    const inputTicketPrice = ticket.querySelector('#ticketPrice');
+
+    //Change the value fo the objects
+    inputTicketAge.value = age;
+    inputTicketNumberOfKilometres.value = numKm;
+    inputTicketPrice.value = price;
+
+    //Hide the ticket info container and show the ticket
+    ticketInfoContainer.classList.toggle('d-none');
+    ticket.classList.toggle('d-none');
+}
