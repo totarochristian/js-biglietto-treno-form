@@ -66,4 +66,7 @@ function GenerateTicket(){
     else if(ageOfPassenger>65)
         price = price - (price*discountSenior)/100;
     console.log(price);
+    //Set 2 decimal places
+    price = price.toFixed(2);
+    console.log(price);
 }
