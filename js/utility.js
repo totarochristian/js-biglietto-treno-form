@@ -46,11 +46,23 @@ function ShowTicket(name,surname,numKm,age,price){
     ticket.classList.toggle('d-none');
 }
 
-function CheckErrors(){
-    return "errore";
+function CheckErrors(name, surname, numKm, age){
+    let errors = "";
+    if(!name || name.length==0 || name == ' ')
+        errors += "Il nome non è corretto<br>";
+    if(!surname || surname.length==0 || surname == ' ')
+        errors += "Il cognome non è corretto<br>";
+    if(!numKm || isNaN(numKm) || parseInt(numKm)<=0)
+        errors += "Il numero di chilometri da percorrere non è corretto<br>";
+    if(!age || isNaN(age) || parseInt(age)<=0)
+        errors += "L'età del passeggero non è corretta<br>";
+    return errors;
 }
 
 function ShowModal(error){
     modal.querySelector('#errors').innerHTML = error;
-
+    modal.classList.toggle('show');
+    modal.style.display = 'block';
+    modal.setAttribute("aria-modal",true);
+    modal.setAttribute("role","dialog");
 }
