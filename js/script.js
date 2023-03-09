@@ -40,3 +40,4 @@ Based on this information, he will have to calculate the total price of the trav
 const ticketInfoContainer = document.getElementById('ticketInfoContainer');;
 const inputAgeOfPassenger = ticketInfoContainer.querySelector('input[name="inputAge"]');
 const inputNumberOfKilometres = ticketInfoContainer.querySelector('input[name="inputKilometres"]');
+const buttonGenerate = ticketInfoContainer.querySelector('button#generate');
