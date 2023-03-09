@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcolo del prezzo del biglietto del treno</title>
+    <!-- Include bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Include fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Include custom css file -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Include custom js file -->
@@ -17,5 +21,46 @@
         <input type="number" name="inputKilometres" id="inputKilometres">
         <button id="generate">Genera</button>
     </div>
+    <div class="d-flex justify-content-center align-items-center">
+        <div id="ticket" class="col-10 col-md-8 col-lg-6 rounded-4">
+            <div id="ticket-header" class="d-flex align-items-center gap-3 px-4 text-white fs-4 rounded-top-4">
+                <i class="fa-solid fa-ticket fs-3"></i>
+                <span>Biglietto del treno</span>
+            </div>
+            <div id="ticket-content" class="px-4 py-4 d-flex">
+                <div id="ticket-info" class="col-11">
+                    <div class="row g-3 px-4">
+                        <div class="col-12 col-md-6">
+                            <label for="inputName" class="form-label fw-semibold">Nome</label>
+                            <input type="text" class="form-control" id="inputName" disabled>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="inputSurname" class="form-label fw-semibold">Cognome</label>
+                            <input type="text" class="form-control" id="inputSurname" disabled>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="inputAge" class="form-label fw-semibold">Età</label>
+                            <input type="number" class="form-control" id="inputAge" disabled>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="inputKilometres" class="form-label fw-semibold">Chilometri (Km)</label>
+                            <input type="number" class="form-control" id="inputKilometres" disabled>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="inputPrice" class="form-label fw-semibold">Prezzo (€)</label>
+                            <input type="number" class="form-control" id="inputPrice" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div id="ticket-code" class="col-1">
+                    <img src="./img/codice-barre.png" alt="Codice a barre">
+                </div>
+            </div>
+            <div id="ticket-footer" class="px-4 rounded-bottom-4">
+            </div>
+        </div>
+    </div>
+    <!-- Include bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
