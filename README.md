@@ -11,6 +11,7 @@ This is a solution to the js-pwdgen-wannabe challenge of [Boolean](https://boole
     - [Errors](#errors)
     - [Ticket](#ticket)
     - [Mobile](#mobile)
+    - [Discount](#discount)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -46,7 +47,15 @@ Users should be able to:
 
 ![](./screenshots/mobile-modal.png)
 
-![](./screenshots/mobile-modal.png)
+![](./screenshots/mobile-ticket.png)
+
+#### Discount
+
+![](./screenshots/discount-no.png)
+
+![](./screenshots/discount-junior.png)
+
+![](./screenshots/discount-senior.png)
 
 ### Links
 
