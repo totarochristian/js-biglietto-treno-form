@@ -123,3 +123,15 @@ function ClickGenerateTicket(){
     }else
         ShowModal(errors);
 }
+
+function GenerateRandomTrainID(){
+    return "Frecciarossa 9806";
+}
+
+function GenerateRandomTrainCab(){
+    return "11";
+}
+
+function GenerateRandomTrainPlace(){
+    return "8F";
+}
