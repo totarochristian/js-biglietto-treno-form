@@ -41,6 +41,9 @@ function ShowTicket(name,surname,numKm,age,price){
     const inputTicketAge = ticket.querySelector('#ticketAge');
     const inputTicketNumberOfKilometres = ticket.querySelector('#ticketKilometres');
     const inputTicketPrice = ticket.querySelector('#ticketPrice');
+    const inputTicketTrainID = ticket.querySelector('#ticketTrainID');
+    const inputTicketTrainCab = ticket.querySelector('#ticketTrainCab');
+    const inputTicketTrainPlace = ticket.querySelector('#ticketTrainPlace');
 
     //Change the value fo the objects
     inputTicketName.value = name;
@@ -48,6 +51,9 @@ function ShowTicket(name,surname,numKm,age,price){
     inputTicketAge.value = age;
     inputTicketNumberOfKilometres.value = numKm;
     inputTicketPrice.value = price;
+    inputTicketTrainID.value = GenerateRandomTrainID();
+    inputTicketTrainCab.value = GenerateRandomTrainCab();
+    inputTicketTrainPlace.value = GenerateRandomTrainPlace();
 
     //Hide the ticket info container and show the ticket
     ticketInfoContainer.classList.toggle('d-none');
