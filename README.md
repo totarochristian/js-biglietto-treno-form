@@ -60,7 +60,7 @@ Users should be able to:
 ### Links
 
 - Solution URL (Github): [https://github.com/totarochristian/js-biglietto-treno-form](https://github.com/totarochristian/js-biglietto-treno-form)
-- Live Site URL (Vercel): [https://js-biglietto-treno-form-9ntcurhhs-totarochristian.vercel.app](https://js-biglietto-treno-form-9ntcurhhs-totarochristian.vercel.app)
+- Live Site URL (Vercel): [https://js-biglietto-treno-form-os8vjgens-totarochristian.vercel.app](https://js-biglietto-treno-form-os8vjgens-totarochristian.vercel.app)
 
 ## My process
 
