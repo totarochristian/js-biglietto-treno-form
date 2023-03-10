@@ -124,14 +124,60 @@ function ClickGenerateTicket(){
         ShowModal(errors);
 }
 
+/**
+ * Function that will generate a random int
+ * @param {bigint} max Max value of the interval
+ * @param {bigint} min Min value of the interval
+ * @returns {bigint} Generated random int value
+ */
+function GetRandomInt(max,min) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+/**
+ * Function that generate a random train ID
+ * @returns {string} Train ID
+ */
 function GenerateRandomTrainID(){
-    return "Frecciarossa 9806";
+    let trainId = "Frecciarossa 9806";
+    switch(GetRandomInt(10,1)){
+        case 1: trainId = 'Frecciarossa 9806'; break;
+        case 2: trainId = 'Frecciarossa 30253'; break;
+        case 3: trainId = 'Frecciarossa 35106'; break;
+        case 4: trainId = 'Frecciarossa 9406'; break;
+        case 5: trainId = 'Frecciarossa 9410'; break;
+        case 6: trainId = 'Frecciarossa 9444'; break;
+        case 7: trainId = 'Frecciarossa 9653'; break;
+        case 8: trainId = 'Frecciarossa 9753'; break;
+        case 9: trainId = 'Frecciarossa 9811'; break;
+        case 10: trainId = 'Frecciarossa 9738'; break;
+    }
+    return trainId;
 }
 
+/**
+ * Function that generate a random train cab code
+ * @returns {bigint} Integer that rapresent the train cab
+ */
 function GenerateRandomTrainCab(){
-    return "11";
+    return GetRandomInt(11,1);
 }
 
+/**
+ * Function that generate a random place id
+ * @returns {string} Place id
+ */
 function GenerateRandomTrainPlace(){
-    return "8F";
+    let place = '' + GetRandomInt(13,1);
+    switch(GetRandomInt(6,1)){
+        case 1: place += 'A'; break;
+        case 2: place += 'B'; break;
+        case 3: place += 'C'; break;
+        case 4: place += 'D'; break;
+        case 5: place += 'E'; break;
+        case 6: place += 'F'; break;
+    }
+    return place;
 }
