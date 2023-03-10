@@ -30,7 +30,7 @@ body{
     max-width: 650px;
     max-height: var(--ticket-height);
     background-color: #ececec;
-    box-shadow: 0 0 20px #888;
+    box-shadow: 0 0 20px white;
 }
 #ticket-header, #ticketInfoHeader{
     max-height: var(--ticket-header-height-perc);
