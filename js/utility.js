@@ -44,6 +44,7 @@ function ShowTicket(name,surname,numKm,age,price){
     const inputTicketTrainID = ticket.querySelector('#ticketTrainID');
     const inputTicketTrainCab = ticket.querySelector('#ticketTrainCab');
     const inputTicketTrainPlace = ticket.querySelector('#ticketTrainPlace');
+    const inputTicketDiscount = ticket.querySelector("#discount");
 
     //Change the value fo the objects
     inputTicketName.value = name;
@@ -54,6 +55,7 @@ function ShowTicket(name,surname,numKm,age,price){
     inputTicketTrainID.value = GenerateRandomTrainID();
     inputTicketTrainCab.value = GenerateRandomTrainCab();
     inputTicketTrainPlace.value = GenerateRandomTrainPlace();
+    inputTicketDiscount.innerHTML = GetDiscountText(age);
 
     //Hide the ticket info container and show the ticket
     ticketInfoContainer.classList.toggle('d-none');
@@ -180,4 +182,18 @@ function GenerateRandomTrainPlace(){
         case 6: place += 'F'; break;
     }
     return place;
+}
+
+/**
+ * Function that will return a textual discount
+ * @param {bigint} age Age of the passenger
+ * @returns {string} Textual discount
+ */
+function GetDiscountText(age){
+    let discount = "Nessuno";
+    if(age<ageJunior)//If age is junior
+        discount = "Junior - " + discountJunior + "%";
+    else if(age>ageSenior)//if age is senior
+        discount = "Senior - " + discountSenior + "%";
+    return discount;
 }
