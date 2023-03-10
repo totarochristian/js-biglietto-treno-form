@@ -24,7 +24,7 @@ Users should be able to:
 
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
-- Fill the fields and generate a train ticket with random train ID, cab and place
+- Fill the fields and generate a train ticket with random train ID, cab and place (with discount by the age of the passenger)
 
 ### Screenshot
 
