@@ -51,7 +51,7 @@ const ageSenior = 65;
 const discountSenior = 40;
 
 //Gets object to use in the program
-const modal = document.getElementById('modalErrors');
+const modal = document.getElementById('exampleModal');
 const ticketInfoContainer = document.getElementById('ticketInfoContainer');
 const ticket = document.getElementById('ticket');
 const inputNameOfPassenger = ticketInfoContainer.querySelector('input[name="inputName"]');
@@ -63,20 +63,6 @@ const buttonGenerate = ticketInfoContainer.querySelector('#generate');
 //Add GenerateTicket function as click event listener function for the generate button
 buttonGenerate.addEventListener('click', ClickGenerateTicket);
 
-function ClickGenerateTicket(){
-    //Gets name and surname of passenger
-    let nameOfPassenger = inputNameOfPassenger.value;
-    let surnameOfPassenger = inputSurnameOfPassenger.value;
-    //Gets values to calculate the price
-    let numberOfKilometres = inputNumberOfKilometres.value;
-    let ageOfPassenger = inputAgeOfPassenger.value;
-    //Check for errors
-    let errors = CheckErrors(nameOfPassenger,surnameOfPassenger,numberOfKilometres,ageOfPassenger);
-    if(!errors){
-        //calculate the price
-        let price = CalculatePrice(numberOfKilometres, ageOfPassenger);
-        //Show the ticket and hide the ticket info container
-        ShowTicket(nameOfPassenger,surnameOfPassenger,numberOfKilometres,ageOfPassenger,price);
-    }else
-        ShowModal(errors);
-}
+//Add event listener to close the modal to the relative buttons
+document.getElementById("ct-close-modal-x").addEventListener('click',HideModal);
+document.getElementById("ct-close-modal-btn").addEventListener('click',HideModal);

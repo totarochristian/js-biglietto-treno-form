@@ -26,6 +26,14 @@ function ApplyDiscountOnPrice(price, age){
     return price;
 }
 
+/**
+ * Function that will set the ticket fields and show it instead of the info form
+ * @param {string} name Name of the passenger
+ * @param {string} surname Surname of the passenger
+ * @param {bigint} numKm Number of kilometres to be travelled by the passenger
+ * @param {bigint} age Age of the passenger
+ * @param {decimal} price Calculated price of the ticket
+ */
 function ShowTicket(name,surname,numKm,age,price){
     //Gets object of the ticket
     const inputTicketName = ticket.querySelector('#ticketName');
@@ -46,6 +54,14 @@ function ShowTicket(name,surname,numKm,age,price){
     ticket.classList.toggle('d-none');
 }
 
+/**
+ * Function that check the errors in the passed data and returns a descriptive string
+ * @param {string} name Name of the passenger
+ * @param {string} surname Surname of the passenger
+ * @param {bigint} numKm Number of kilometres to be travelled by the passenger
+ * @param {bigint} age Age of the passenger
+ * @returns {string} String that will describe the errors
+ */
 function CheckErrors(name, surname, numKm, age){
     let errors = "";
     if(!name || name.length==0 || name == ' ')
@@ -59,10 +75,45 @@ function CheckErrors(name, surname, numKm, age){
     return errors;
 }
 
+/**
+ * Function that will show the modal with the error passed as the modal body text
+ * @param {string} error Error to be shown
+ */
 function ShowModal(error){
     modal.querySelector('#errors').innerHTML = error;
     modal.classList.toggle('show');
     modal.style.display = 'block';
     modal.setAttribute("aria-modal",true);
     modal.setAttribute("role","dialog");
+}
+
+/**
+ * Function that will hide the modal
+ */
+function HideModal(){
+    modal.classList.toggle('show');
+    modal.style.display = 'none';
+    modal.setAttribute("aria-modal",false);
+    modal.removeAttribute("role");
+}
+
+/**
+ * Function that gets the values from the info form, check the errors, calculate the price and show the ticket or modal with error
+ */
+function ClickGenerateTicket(){
+    //Gets name and surname of passenger
+    let nameOfPassenger = inputNameOfPassenger.value;
+    let surnameOfPassenger = inputSurnameOfPassenger.value;
+    //Gets values to calculate the price
+    let numberOfKilometres = inputNumberOfKilometres.value;
+    let ageOfPassenger = inputAgeOfPassenger.value;
+    //Check for errors
+    let errors = CheckErrors(nameOfPassenger,surnameOfPassenger,numberOfKilometres,ageOfPassenger);
+    if(!errors){
+        //calculate the price
+        let price = CalculatePrice(numberOfKilometres, ageOfPassenger);
+        //Show the ticket and hide the ticket info container
+        ShowTicket(nameOfPassenger,surnameOfPassenger,numberOfKilometres,ageOfPassenger,price);
+    }else
+        ShowModal(errors);
 }
