@@ -68,6 +68,9 @@ input[type="text"]:disabled, input[type="number"]:disabled{
 .ct-bg-color-red{
     background-color: #d43a30;
 }
+#ticketInfoContainer>div{
+    box-shadow: 0 0 20px #888;
+}
 
 /*****************************************************************/
 /***************************** Media *****************************/
